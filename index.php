@@ -16,7 +16,7 @@
 <div>
     <?php 
       include 'database.php';
-      $filter_flags = array()
+      $filter_flags = array("Web","Mobile Apps", "Algorithms", "Computer Graphics", "Operating Systems", "Java", "Kotlin", "C++", "Open GL", "Python", "Racket")
     ?>
     <form method="post" action="./search.php">
         <div class="filter-inline">
