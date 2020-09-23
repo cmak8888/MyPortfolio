@@ -4,7 +4,8 @@
 <body>
 <?php include 'database.php' ?>
 
-<?php
+<?php 
+  // For refreshing the page with updated submission
   if(isset($_POST['submit'])){
     //SQL Query
     echo "<meta http-equiv='refresh' content='0'>";
