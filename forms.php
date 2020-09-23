@@ -20,20 +20,20 @@
                 - 
 -->
         <?php
-            $filter_flags = array("Web","Mobile Apps", "Algorithms", "Computer Graphics", "Operating Systems", "Java", "Kotlin", "C++", "Open GL", "Python", "Racket")
+            $filter_flags = array("Web","Mobile Apps", "Algorithms", "Computer Graphics", "Operating Systems", "Java", "Kotlin", "C++", "Open GL", "Python", "Racket");
         ?>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> ">
             <fieldset class="project">
                 <legend> New Project </legend>
                 <label for="pname">Project Name:</label> <input type="text" id="name" name="pname" />
                 <label for="pdesc">Project Description:</label> <input type="text" id="desc" name="pdesc" />
-                <label for="images">Images:</label><input type="file" id="media" name="images" accept="image/*|video/*|audio/*" />
+                <label for="images">Images:</label><input type="file" id="media" name="images" accept="image/*|video/*|audio/*" multiple />
                 <label for="link">Link: </label><input type="text" id="link" name="link" /><div class="filter-inline">
                 <div class="filter-inline">
                 Flags:
                 <?php
                     for($x = 0; $x < sizeof($filter_flags);$x++) {
-                        echo '<input id="$filter_flags[$x]" type="checkbox" value='$filter_flags[$x]'><label></label>';
+                        echo "<input id=\"$filter_flags[$x]\" type=\"checkbox\" value=\"$filter_flags[$x]\"><label>$filter_flags[$x]</label>";
                     }
                 ?>
                 </div>

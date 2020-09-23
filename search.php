@@ -8,21 +8,22 @@
   // For refreshing the page with updated submission
   if(isset($_POST['submit'])){
     //SQL Query
+    $query = "SELECT * FROM MyPortfolio";
     echo "<meta http-equiv='refresh' content='0'>";
   }
 ?>
 <?php
-    for ($rows = 0; $rows <= $table; $row++) {
-      echo '
+    while ($row = $query->fetch_assoc()) {
+      echo "
         <div>
             <ul>
-                <li class="project_title">$table[$rows]</li>
-                <li class="project_desc">$table[$rows[2]]</li>
-                <li class="slideshow"></li>
-                <li class="project_link><a href="">Project Link</a></li>
+                <li class=\"project_title\">{$row['name']}</li>
+                <li class=\"project_desc\">{$row['desc']}</li>
+                <li class=\"slideshow\"></li>
+                <li class=\"project_link\"><a href=\"{$row['link']}\">Project Link</a></li>
             </ul>
         </div>
-      ';
+      ";
     }
 ?>
 

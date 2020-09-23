@@ -1,9 +1,18 @@
 body {
     text-align:center;
-
+    display: block;
 }
 
 .filter-inline {
     display: inline-block;
 
+}
+
+ul {
+    display: inline-block;
+}
+
+li { 
+    display: inline-block;
+    list-style-type: none;
 }

@@ -16,18 +16,19 @@
 <div>
     <?php 
       include 'database.php';
-      $filter_flags = array("Web","Mobile Apps", "Algorithms", "Computer Graphics", "Operating Systems", "Java", "Kotlin", "C++", "Open GL", "Python", "Racket")
+      $filter_flags = array("Web","Mobile Apps", "Algorithms", "Computer Graphics", "Operating Systems", "Java", "Kotlin", "C++", "Open GL", "Python", "Racket");
     ?>
     <form method="post" action="./search.php">
         <div class="filter-inline">
           <?php
               for($x = 0; $x < sizeof($filter_flags);$x++) {
-                echo '<label><input id="'$filter_flags[$x]'" type="checkbox">'$filter_flags[$x]'</label>';
+                echo "<label><input id=\"{$filter_flags[$x]}\" type=\"checkbox\">{$filter_flags[$x]}</label>";
               }
           ?>
         </div>
+        <br />
         <input type="text" value="Search..." />
-        <button type="submit" value="Search" />
+        <input type="submit" value="Search" />
     </form>
 </div>
 <?php
