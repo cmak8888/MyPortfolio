@@ -6,7 +6,7 @@
   <meta name="author" content="Calvin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="main.scss" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
   <title>My Portfolio</title>
 </head>
@@ -22,7 +22,7 @@
         <div class="filter-inline">
           <?php
               for($x = 0; $x < sizeof($filter_flags);$x++) {
-                echo '<label><input id="$filter_flags[$x]" type="checkbox">$filter_flags[$x]</label>';
+                echo '<label><input id="'$filter_flags[$x]'" type="checkbox">'$filter_flags[$x]'</label>';
               }
           ?>
         </div>
